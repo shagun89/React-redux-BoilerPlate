@@ -34,18 +34,7 @@ class Task extends React.Component{
     }
     
     render() {
-        console.log("task propsL: ",this.props);
-        
-        var taskData;
-        // 
-        // setTimeout(() => {
-            
-        //     this.props.formData ? taskData = this.props.formData.data.map(function(elem){
-        //         console.log("In task panel: " + elem["title"])
-        //         return elem
-        //         }) :
-        //         taskData = null
-        // }, 3000)
+        console.log("task props: ",this.props);
         
         return (
         <div className="wrapper">
@@ -63,47 +52,48 @@ class Task extends React.Component{
   <div className="row">
   <div className="column rejected" >
   {
-     this.props.rejected ? 
-     this.props.rejected.map(function(elem){
-        return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id} stat = {elem.editStatus}/>
-      }) :
-      ''
+     this.props.rejected && 
+     this.props.rejected.map((elem)=>{
+        return (<TaskCard 
+                  title = {elem.title} 
+                  description = {elem.description} 
+                  id = {elem.id} 
+                  stat = {elem.editStatus} 
+                  element = {elem}
+                />);
+      })
   }
   </div>
   <div className="column pending" >
   {
-      this.props.pending ? 
-      this.props.pending.map(function(elem){
-        return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id}/>
-      }) :
-      ''
+      this.props.pending &&
+      this.props.pending.map((elem)=>{
+        return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id} element = {elem}/>
+      })
   }
   </div>
   <div className="column development" >
   {
-      this.props.development ? 
-      this.props.development.map(function(elem){
-        return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id}/>
-      }) :
-      ''
+      this.props.development && 
+      this.props.development.map((elem)=>{
+        return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id} element = {elem}/>
+      })
   }
   </div>
   <div className="column testing" >
   {
-      this.props.testing ? 
-      this.props.testing.map(function(elem){
+      this.props.testing && 
+      this.props.testing.map((elem)=>{
         return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id}/>
-      }) :
-      ''
+      })
   }
   </div>
   <div className="column production" >
   {
-      this.props.production ? 
-      this.props.production.map(function(elem){
+      this.props.production && 
+      this.props.production.map((elem)=>{
         return <TaskCard title = {elem.title} description = {elem.description} id = {elem.id}/>
-      }) :
-      ''
+      })
   }
   </div>
 </div>

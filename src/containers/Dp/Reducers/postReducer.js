@@ -1,5 +1,6 @@
 
 import { Constants } from '../constants';
+import { ActionSchedule } from 'material-ui/svg-icons';
 
 const initialState = {
     // test:5,
@@ -15,7 +16,9 @@ const initialState = {
     pending : [],
     development : [],
     testing : [],
-    production : []
+    production : [],
+    specificId: null,
+    selectedElement: null
 };
 
 export default function (state = initialState, action) {
@@ -102,7 +105,8 @@ export default function (state = initialState, action) {
                 }
         case Constants.EDIT_TASK:
                 return {...state,
-                    edit :  action.edit
+                    edit :  action.edit,
+                    selectedElement: action.selectedElement
                 }
         
         default:

@@ -52,6 +52,7 @@ class UpdateTaskForm extends React.Component {
     
   render() {
     console.log("Update props: " + this.props.taskId);
+    debugger;
     return (
       
       <form style={container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>

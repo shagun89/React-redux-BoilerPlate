@@ -101,28 +101,6 @@ class Dp extends Component {
   
     
     return (
-    //   <div>
-    //     Obelix dashboard..
-    //    <button className="hyy" onClick={() => { this.props.Test(this.props.test + 5) }}>hyy</button>
-    //     <button onClick={() => { this.props.ApiCall() }}>ApiCall</button>
-    //     <button onClick={() => { this.props.postApiCall() }}>Post api call</button>
-    //     {console.log("visi:", this.props.visibility)}
-    //     {this.props.visibility &&
-    //       <div className="full-loader">
-    //         <div className="relative">
-    //           <div className="abs" id='full-screen-loader-wrapper'>
-    //             <CircularProgress size={50} thickness={5} />
-    //           </div>
-    //         </div>
-    //       </div>
-    //     }
-    // {this.props.divState ?
-    //     <div>i am here <button onClick={()=>{this.props.openDiv(false)}}>close</button></div> :
-    //     <p>bye</p>
-    // }
-
-    //     <button onClick={()=>{this.props.openDiv(true)}}> open</button>
-    //   </div>
     <div>
       
         <AppBar position="static">

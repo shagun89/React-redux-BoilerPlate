@@ -113,13 +113,14 @@ export function handleExpandClick(value){
 }
 }
 
-export function handleEditClick(value){
-  console.log("value in action of edit click: ",value);
+export function handleEditClick(value, selectedElement){
+  console.log("specific id in actions : ", selectedElement);
   
   return (dispatch) => {
     dispatch({
       type : Constants.EDIT_TASK,
-      edit: value
+      edit: value,
+      selectedElement
   });
 }
     
